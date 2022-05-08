@@ -1,0 +1,7 @@
+{"classname": "Predatory", "id": 0, "name": "Тигр", "type_food": {"classname": "Meaty", "name": "beef"}, "count_food": 4}
+{"classname": "Predatory", "id": 1, "name": "Волк", "type_food": {"classname": "Meaty", "name": "beef"}, "count_food": 3}
+{"classname": "Omnivorous", "id": 2, "name": "Корова", "type_food": {"classname": "Vegetable", "name": "grass"}, "count_food": 10}
+{"classname": "Omnivorous", "id": 3, "name": "Заяц", "type_food": {"classname": "Vegetable", "name": "carrot"}, "count_food": 6}
+{"classname": "Herbivorous", "id": 4, "name": "Человек", "type_food": {"classname": "Meaty", "name": "fish"}, "count_food": 3}
+{"classname": "Herbivorous", "id": 5, "name": "Медведь", "type_food": {"classname": "Vegetable", "name": "corn"}, "count_food": 8}
+{"classname": "Animal", "id": 6, "name": "Кот", "type_food": {"classname": "Meaty", "name": "fish"}, "count_food": 4}
