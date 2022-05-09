@@ -3,8 +3,11 @@ import json
 from pathlib import Path
 
 from polynomial import Polynomial
+
 from animals import Predatory, Omnivorous, Herbivorous, Animal
 from food import Meaty, Vegetable
+
+from libraries import Book, Library
 
 
 def polynomial_test():
@@ -33,20 +36,18 @@ def animals_test():
         n = len(arr)
         result = arr.copy()
         for i in range(n - 1):
-            for j in range(0, n - i - 1):
+            for j in range(n - i - 1):
                 if result[j].count_food < result[j + 1].count_food:
                     result[j], result[j + 1] = result[j + 1], result[j]
                 elif result[j].count_food == result[j + 1].count_food:
                     size = len(result[j].name) if len(result[j].name) <= len(result[j + 1].name) else len(
                         result[j + 1].name)
-                    for char in range(0, size):
+                    for char in range(size):
                         if result[j].name[char] > result[j + 1].name[char]:
                             result[j], result[j + 1] = result[j + 1], result[j]
                             break
                         elif result[j].name[char] < result[j + 1].name[char]:
                             break
-                        else:
-                            continue
 
         return result
 
@@ -109,8 +110,31 @@ def animals_test():
     print_animals_tag(order, 'id', len(order), len(order) - 3)
 
 
+def libraries_test():
+    lib = Library(
+        Book(13, 'Маракотова бездна', 'Артур Конан Дойл', 1929, 'Фантастика'),
+        Book(245, 'Искусство сновидения', 'Карлос Кастанеда', 1993, 'Философия'),
+        Book(2, 'Рыцарь на золотом коне', 'Диана Уинн Джонс', 1985, 'Детская литература'),
+        Book(76, 'В зоне тумана', 'Алексей Гравицкий', 2009, 'Фантастика'),
+        Book(34, 'Армагеддон', 'Роман Злотников', 2002, 'Фантастика'),
+        Book(8, 'Конармия', 'Артур Конан Дойл', 1937, 'Книги о войне'),
+        Book(55, 'Тонкое искусство пофигизма', 'Марк Мэнсон', 2016, 'Психология'),
+        Book(123, 'Не позже полуночи', 'Дафна Дю Морье', 1971, 'Ужасы'),
+        Book(754, 'Тихий Дон', 'Михаил Шолохов', 1940, 'Книги о войне')
+    )
+
+    lib.add(Book(132, 'Правда жизни', 'Грэм Джойс', 2002, 'Книги о войне'))
+    lib.remove(34)
+    lib.sorted('id')
+    lib.print_library()
+    find_books = lib.find(category='Фантастика')
+    lib.print_books(*find_books)
+
+
 if __name__ == '__main__':
     print('============== Тест многочлена ==============')
     polynomial_test()
     print('============== Тест класса животных ==============')
     animals_test()
+    print('============== Тест библиотеки ==============')
+    libraries_test()
