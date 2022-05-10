@@ -2,12 +2,12 @@ import enum
 import json
 from pathlib import Path
 
-from polynomial import Polynomial
+from task06.polynomial.polynomial import Polynomial
 
-from animals import Predatory, Omnivorous, Herbivorous, Animal
-from food import Meaty, Vegetable
+from task06.animals.animals import Predatory, Omnivorous, Herbivorous, Animal
+from task06.animals.food import Meaty, Vegetable
 
-from libraries import Book, Library
+from task06.library.libraries import Book, Library
 
 
 def polynomial_test():

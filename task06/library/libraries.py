@@ -1,9 +1,4 @@
 class Book:
-    id = None
-    title = None
-    author = None
-    year = None
-    category = None
 
     def __init__(self, id, title, author, year, category):
         self.id = id
@@ -14,10 +9,10 @@ class Book:
 
 
 class Library:
-    _libraries = []
 
     def __init__(self, *books):
         self.add(*books)
+        self._libraries = []
 
     def add(self, *books):
         for book in books:

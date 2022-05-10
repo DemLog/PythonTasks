@@ -2,10 +2,6 @@ from food import Meaty, Vegetable
 
 
 class Animal:
-    id = 0
-    name = ''
-    type_food = None
-    count_food = 0
 
     def __init__(self, id_animal, name, type_food, count_food):
         self.id = id_animal

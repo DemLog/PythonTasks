@@ -1,6 +1,4 @@
 class Polynomial:
-    _degree = 0
-    _coefficients = []
 
     def __init__(self, *coefficients):
         self._degree = len(coefficients)

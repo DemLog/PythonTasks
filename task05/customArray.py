@@ -2,11 +2,10 @@ import random
 
 
 class CustomArray:
-    _array = []
-    _size_arr = 0
 
     def __init__(self, size_arr):
         self._size_arr = size_arr
+        self._array = []
 
     def __del__(self):
         pass
